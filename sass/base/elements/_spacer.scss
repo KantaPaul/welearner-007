@@ -1,0 +1,17 @@
+.default-spacer {
+    padding: {
+        top: rem(127px);
+        bottom: rem(127px);
+    };
+}
+
+.welearner-section-topic {
+    &.default-spacer {
+        padding: {
+            bottom: rem(0px);
+        };
+    }
+    + .default-spacer {
+        padding-top: rem(62px);
+    }
+}

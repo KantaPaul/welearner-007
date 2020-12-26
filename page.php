@@ -9,9 +9,11 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Welearner
+ * @package welearner
  */
-
+if (!defined('ABSPATH')) {
+	die('Direct access forbidden.');
+}
 get_header();
 ?>
 

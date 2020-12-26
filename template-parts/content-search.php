@@ -4,9 +4,11 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Welearner
+ * @package welearner
  */
-
+if (!defined('ABSPATH')) {
+	die('Direct access forbidden.');
+}
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Welearner
+ * @package welearner
  */
 
 /*
@@ -15,6 +15,9 @@
  * the visitor has not yet entered the password we will
  * return early without loading the comments.
  */
+if (!defined('ABSPATH')) {
+	die('Direct access forbidden.');
+}
 if ( post_password_required() ) {
 	return;
 }

@@ -4,9 +4,11 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Welearner
+ * @package welearner
  */
-
+if (!defined('ABSPATH')) {
+	die('Direct access forbidden.');
+}
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	return;
 }

@@ -1,0 +1,26 @@
+.btn-primary {
+    background-color: $color_primary;
+    border-color: $color_primary;
+    &:hover {
+        background-color: darken($color: $color_primary, $amount: 8);
+        border-color: darken($color: $color_primary, $amount: 8);
+    }
+}
+.btn-outline-primary {
+    border-color: $color_primary;
+    color: $color_primary;
+    &:hover {
+        background-color: $color_primary;
+    }
+}
+.btn {
+    border-radius: 2px;
+    font-size: rem(18px);
+    font-weight: 700;
+    &:not(.btn-sm) {
+        padding: rem(11px) rem(28px);
+    }
+}
+.btn-sm {
+    font-size: rem(12px);
+}

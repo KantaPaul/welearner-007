@@ -1,0 +1,56 @@
+.welearner-banner_area {
+    min-height: rem(904px);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
+    > .container {
+        width: 100%;
+        flex: 0 0 100%;
+    }
+}
+
+.welearner-banner-main-content {
+    color: $color_white;
+}
+
+
+.welearner_baner_heading_title {
+    margin-top: 0;
+    @include potrait-tablet-upper() {
+        line-height: (72px / 65px);
+    }
+    color: inherit;
+    margin-bottom: rem(35px);
+}
+
+.welearner_banner_content {
+    font-size: rem(20px);
+    line-height: (40px / 20px);
+    @include potrait-tablet-upper {
+        margin-bottom: rem(41px);
+    }
+}
+
+.welearner-course-search-form {
+    position: relative;
+    .form-control {
+        height: auto;
+    }
+    @include potrait-tablet-upper() {
+        .form-control {
+            padding: rem(37px) 0;
+            padding-left: rem(40px);
+            padding-right: rem(210px);
+        }
+        .btn {
+            position: absolute;
+            right: rem(20px);
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+            font-weight: 500;
+            font-size: rem(18px);
+            padding: rem(15px) rem(59px);
+        }
+    }
+}

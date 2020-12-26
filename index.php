@@ -9,14 +9,17 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Welearner
+ * @package welearner
  */
-
+if (!defined('ABSPATH')) {
+	die('Direct access forbidden.');
+}
 get_header();
 ?>
 
 	<main id="primary" class="site-main">
 
+		<div class="container">
 		<?php
 		if ( have_posts() ) :
 
@@ -49,6 +52,7 @@ get_header();
 
 		endif;
 		?>
+		</div>
 
 	</main><!-- #main -->
 

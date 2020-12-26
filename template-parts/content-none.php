@@ -4,9 +4,11 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Welearner
+ * @package welearner
  */
-
+if (!defined('ABSPATH')) {
+	die('Direct access forbidden.');
+}
 ?>
 
 <section class="no-results not-found">

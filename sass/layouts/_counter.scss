@@ -1,0 +1,24 @@
+.welearner-section-counter {
+    @include potrait-tablet-upper {
+        > .container {
+            max-width: 940px;
+        }
+    }
+}
+.single-counter {
+    @include potrait-tablet-upper {
+        padding-right: rem(86px);
+    }
+}
+.counter-content {
+    letter-spacing: letter_spacing(-42);
+    margin-bottom: rem(18px);
+    @include potrait-tablet-upper {
+        font-size: rem(63px);
+    }
+    line-height: (30px / $h3);
+}
+.counter_up_suffix {
+    display: inline-block;
+    margin-left: -12px;
+}

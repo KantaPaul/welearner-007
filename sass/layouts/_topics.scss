@@ -1,0 +1,28 @@
+.welearner-topic-list {
+    border: 1px solid #E8EAEC;
+    border-radius: rem(14px);
+    margin-bottom: rem(60px);
+    padding: {
+        left: rem(30px);
+        top: rem(14px);
+        bottom: rem(18px);
+        right: rem(16px);
+    };
+    .topic_icon {
+        color: #C7C5F6;
+        border-radius: rem(19px);
+        width: rem(57px);
+        height: rem(57px);
+        flex: 0 0 rem(57px);
+        margin-right: rem(14px);
+        > i {
+            font-size: rem(20px);
+        }
+    }
+    .topic-content {
+        color: #1C2D41;
+        font-size: rem(24px);
+        font-weight: 500;
+        line-height: 1.2;
+    }
+}

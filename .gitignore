@@ -102,8 +102,11 @@ dist
 
 # TernJS port file
 .tern-port
-.stylelintrc.json
+*.config
+composer.json
 .eslintrc
+.stylelintrc.json
 package.json
 phpcs.xml.dist
-composer.json
+package-lock.json
+style.css.map

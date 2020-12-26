@@ -4,9 +4,11 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Welearner
+ * @package welearner
  */
-
+if (!defined('ABSPATH')) {
+	die('Direct access forbidden.');
+}
 if ( ! function_exists( 'welearner_posted_on' ) ) :
 	/**
 	 * Prints HTML with meta information for the current post-date/time.
