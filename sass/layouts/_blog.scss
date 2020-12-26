@@ -1,0 +1,47 @@
+.welearner-section-blog {
+    position: relative;
+    padding-top: rem(98px);
+    padding-bottom: rem(159px);
+    > .container {
+        position: relative;
+        z-index: 5;
+    }
+    .blog_shape_image {
+        @include potrait-tablet-upper {
+            position: absolute;
+            top: rem(-72px);
+            right: 0;
+            pointer-events: none;
+        }
+        @include potrait-tablet {
+            display: none;
+        }
+    }
+}
+.entry-thumb {
+    display: block;
+    padding-bottom: 62%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.entry-header {
+    margin-bottom: rem(18px);
+}
+.blog-post {
+    .entry-content {
+        margin-top: 0;
+    }
+}
+.entry-title {
+    color: $color__text-main;
+    line-height: (30px / $h4);
+    margin-bottom: rem(11px);
+    letter-spacing: -.5px;
+    > a {
+        color: inherit;
+        &:hover {
+            color: $color_primary;
+        }
+    }
+}

@@ -16,7 +16,7 @@
     $courses = new WP_Query($course_arr);
 ?>
 
-<section class="welearner-tranding-course-area default-spacer">
+<section class="welearner-tranding-course-area">
   <div class="container">
     <?php
         new Welearner\Heading\Welearner_Heading_Class($tranding_course_area_heading, $tranding_course_area_button_text, $tranding_course_area_button_url);

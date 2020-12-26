@@ -17,10 +17,20 @@
     border-radius: 2px;
     font-size: rem(18px);
     font-weight: 700;
-    &:not(.btn-sm) {
+    &:not(.btn-sm):not(.btn-link) {
         padding: rem(11px) rem(28px);
     }
 }
 .btn-sm {
     font-size: rem(12px);
+}
+
+.btn-link {
+    padding: 0;
+    color: #6058F1;
+    font-size: rem(14px);
+    font-weight: 400;
+    &:hover {
+        color: $color_primary;
+    }
 }

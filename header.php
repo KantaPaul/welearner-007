@@ -27,7 +27,7 @@ if (!defined('ABSPATH')) {
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'welearner' ); ?></a>
 
-<?php 
+<?php
 	get_template_part( 'template-parts/components/component', 'header' );
-	get_template_part( 'template-parts/components/component', 'banner' ); 
+	get_template_part( 'template-parts/components/component', 'banner' );
 ?>

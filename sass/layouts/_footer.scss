@@ -1,0 +1,109 @@
+.footer_left_content {
+    @include potrait-tablet-upper {
+        padding-right: rem(80px);
+    }
+    .navbar-brand {
+        margin-bottom: rem(27px);
+    }
+    .footer_text {
+        margin-bottom: rem(100px);
+    }
+}
+
+a.text-logo {
+    color: #42C3AF;
+}
+.navbar-brand {
+    font-size: rem(28px);
+    font-weight: 700;
+    > img {
+        max-width: rem(120px);
+        max-height: rem(40px);
+    }
+}
+.footer_text {
+    color: rgba($color: $color_white, $alpha: .46);
+}
+
+.footer_social_icon {
+    margin-bottom: 0;
+    margin-left: 0;
+    > li {
+        display: inline-block;
+        &:not(:last-child) {
+            margin-right: rem(8px);
+        }
+        > a {
+            display: block;
+            height: rem(40px);
+            width: rem(39px);
+            display: flex;
+            align-items: center;
+            border-radius: rem(4px);
+            background-color: rgba($color: #F2F2F2, $alpha: .22);
+            color: $color_white;
+            font-size: rem(12px);
+            @include transition;
+            @each $name, $color in $socials {
+                &[class*="#{$name}"] {
+                    color: $color;
+                    &:hover {
+                        background-color: $color;
+                        color: $color_white;
+                    }
+                }
+            }
+            &::before {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.widget-holder {
+    ul {
+        margin-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+        padding-left: 0;
+        li {
+            &:not(:last-child) {
+                margin-bottom: rem(10px);
+            }
+            a {
+                color: $color_alternate;
+            }
+        }
+    }
+}
+
+.footer_widget {
+    .widgets-title {
+        color: $color_white;
+    }
+    ul {
+        li {
+            a {
+                color: rgba($color: $color_white, $alpha: .46);
+                &:hover {
+                    color: rgba($color: $color_white, $alpha: 1);
+                }
+            }
+        }
+    }
+}
+.widgets-title {
+    margin-bottom: rem(41px);
+}
+
+.footer-widget-wrapper {
+    padding-top: rem(10px);
+}
+.site-footer {
+    background-color: #021E40;
+    padding: {
+        top: rem(109px);
+        bottom: rem(139px);
+    };
+}

@@ -7,3 +7,69 @@
 .welearner-section-title-wraper {
     margin-bottom: rem(64px);
 }
+
+.welearner_testimonial_heading {
+    .welearner-section-title {
+        @include potrait-tablet-upper {
+            padding-right: rem(200px);
+        }
+    }
+}
+
+blockquote {
+    font-size: rem(20px);
+    font-weight: 700;
+    font-family: $font__title;
+    position: relative;
+    line-height: (32px / 20px);
+    margin: {
+        left: 0;
+        right: 0;
+    };
+    @include potrait-tablet-upper {
+        &::before {
+            content: "";
+            position: absolute;
+            left: rem(-89px);
+            top: 0;
+            background-image: url('assets/images/quote-icon.png');
+            width: rem(139px);
+            height: rem(100px);
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+}
+
+.welearner-creator-heading {
+    position: relative;
+    z-index: 5;
+    .welearner-section-title {
+        @include potrait-tablet-upper {
+            padding: {
+                left: rem(90px);
+                right: rem(90px);
+            };
+        }
+        margin: {
+            bottom: rem(26px)
+        };
+    }
+    .welearner-section-content {
+        font-size: rem(20px);
+        margin-bottom: 0;
+    }
+    margin-bottom: rem(47px);
+}
+
+.welearner-section-blog {
+    .welearner-section-title-wraper  {
+        margin-bottom: rem(48px);
+    }
+}
+
+.welearner-blog-section-title {
+    @include potrait-tablet-upper {
+        padding-right: rem(240px);
+    }
+}

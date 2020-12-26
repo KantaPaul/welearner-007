@@ -1,0 +1,98 @@
+.creator_thumbnail_wraper {
+    position: relative;
+    overflow: hidden;
+    .team-social-icon {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 2;
+        height: auto;
+        width: 100%;
+        padding: 55px 10px 8px;
+        @include transition;
+        opacity: 0;
+        &::before {
+            content: "";
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-position: left top;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 260.006 95.33'%3e%3cpath d='M-15494-581.75v-93.024s175.1-24.17,260.006,93.024C-15233.994-581.2-15494-581.75-15494-581.75Z' transform='translate(15494 676.836)' fill='rgba%2896, 88, 241, 1%29'/%3e%3c/svg%3e");
+        }
+    }
+    .social-media-profile {
+        > li {
+            >a {
+                color: $color_white;
+                &:hover {
+                    color: rgba($color: $color_white, $alpha: .7);
+                }
+            }
+        }
+    }
+}
+
+.single_creator_item {
+    &:hover {
+        .creator_thumbnail_wraper {
+            .team-social-icon {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.social-media-profile {
+    margin-left: 0;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 5;
+    > li {
+        display: inline-block;
+        &:not(:last-child) {
+            margin-right: rem(20px);
+        }
+        > a {
+            font-size: rem(18px);
+            color: $color_primary;
+        }
+    }
+}
+
+.creator_name {
+    font-size: rem(18px);
+    margin-bottom: 0;
+    >a {
+        color: inherit;
+        &:hover {
+            color: $color_primary;
+        }
+    }
+}
+
+.creator_designation {
+    color: #556170;
+    font-size: rem(14px);
+}
+
+.creator-meta-info {
+    padding: rem(33px) rem(30px);
+}
+
+.welearner-section-creator {
+    position: relative;
+    .bg_image_shape {
+        @include potrait-tablet-upper {
+            position: absolute;
+            top: rem(22px);
+            left: rem(210px);
+            pointer-events: none;
+        }
+        @include potrait-tablet {
+            display: none;
+        }
+    }
+}

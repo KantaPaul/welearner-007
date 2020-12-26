@@ -10,7 +10,7 @@ if(defined('FW')) {
 }
 ?>
 
-<div class="welearner-section-counter default-spacer">
+<div class="welearner-section-counter">
     <div class="container">
         <div class="row">
             <?php

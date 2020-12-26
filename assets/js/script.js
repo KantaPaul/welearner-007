@@ -17,13 +17,16 @@ jQuery(function($){
             autoplay:autoplay,
             responsive:{
                 0:{
-                    items:1
+                    items:1,
+                    margin: 0,
                 },
                 600:{
-                    items:2
+                    items:2,
+                    margin: 65,
                 },
                 1000:{
-                    items:Number(items)
+                    items:Number(items),
+                    margin: 130,
                 }
             }
         })
@@ -38,13 +41,16 @@ jQuery(function($){
             autoplay:autoplay,
             responsive:{
                 0:{
-                    items:1
+                    items:1,
+                    margin: 0,
                 },
                 600:{
-                    items:2
+                    items:2,
+                    margin: 30,
                 },
                 1000:{
-                    items:Number(items)
+                    items:Number(items),
+                    margin: 60,
                 }
             }
         })

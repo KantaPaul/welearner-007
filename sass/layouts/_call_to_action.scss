@@ -1,0 +1,38 @@
+.call_to_action_title {
+    margin-bottom: rem(23px);
+    letter-spacing: -1.4px;
+}
+.call_to_action_title ,
+.call_to_action_exerpt {
+    color: $color_alternate;
+}
+.call_to_action_exerpt {
+    // font-size: rem(16px);
+    font-weight: 500;
+    line-height: (27px / $font__font-size-body);
+    @include potrait-tablet-upper {
+        padding: 0 rem(49px);
+    }
+}
+.single_call_to_action {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: {
+        top: rem(47px);
+        bottom: rem(60px);
+        left: rem(50px);
+        right: rem(50px);
+    };
+    .btn {
+        font-size: rem(20px);
+        font-family: $font__title;
+        font-weight: 700;
+        padding: rem(16px);
+    }
+}
+
+.coll-to-action-secton {
+    padding-bottom: rem(120px);
+}

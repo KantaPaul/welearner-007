@@ -1,0 +1,41 @@
+.testimonial_reviewr-thummb {
+    > img {
+        height: rem(70px);
+        width: rem(70px);
+        border-radius: 50%;
+    }
+    margin-bottom: rem(15px);
+}
+.testimonial_reviewr_title{
+    margin-bottom: 0;
+}
+.testimonial_reviewer_designation {
+    font-size: rem(14px);
+    color: #1C2D41;
+    margin-bottom: 0;
+}
+
+.testimonial_reviewer_header {
+    margin-bottom: rem(17px);
+}
+
+.testimonial_reviewer-comment {
+    margin-bottom: rem(25px);
+    > p {
+        margin-bottom: 0;
+    }
+}
+
+.testimonial_reviewer_featured_text {
+    line-height: (25px / $h5);
+    margin-bottom: 0;
+}
+
+.welearner-testimonial-wraper {
+    padding-bottom: rem(150px);
+}
+
+.welearner-testimonial-area {
+    background: rgb(227,216,216);
+    background: linear-gradient(#FAFAFE 0%, rgba(255, 255, 255, 0) 100%);
+}

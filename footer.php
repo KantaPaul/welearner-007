@@ -2,20 +2,20 @@
     if (!defined('ABSPATH')) {
         die('Direct access forbidden.');
 	}
-	
-	$footer_logo = "";
-	$footer_text = "";
+
+	$footer_logo             = "";
+	$footer_text             = "";
 	$footer_background_image = "";
 	$footer_background_color = "";
 	$footer_social_profiles = [];
 	if(defined('FW')) {
-		$footer_logo = fw_get_db_customizer_option('footer_logo');
-		$footer_text = fw_get_db_customizer_option('footer_text');
-		$footer_social_profiles = fw_get_db_customizer_option('footer_social_profiles');
+		$footer_logo             = fw_get_db_customizer_option('footer_logo');
+		$footer_text             = fw_get_db_customizer_option('footer_text');
+		$footer_social_profiles  = fw_get_db_customizer_option('footer_social_profiles');
 		$footer_background_image = fw_get_db_customizer_option('footer_background_image');
 		$footer_background_color = fw_get_db_customizer_option('footer_background_color');
 	} else {
-		$footer_text = esc_html__( "Lorem ipsum dolor sit amet, consectetur 
+		$footer_text = esc_html__( "Lorem ipsum dolor sit amet, consectetur
 		adipiscing elit. Sed justo nulla, ", 'welearner' );
 		$footer_background_color = "#021E40";
 	}
@@ -26,7 +26,7 @@
 		<div class="row">
 			<div class="col-lg-4">
 				<div class="footer_left_content">
-					<a href="<?php echo home_url('/'); ?>" class="navbar-brand">
+					<a href="<?php echo home_url('/'); ?>" class="navbar-brand text-logo">
 					<?php
 						if (empty($footer_logo)) {
 							bloginfo( 'name' );
@@ -41,7 +41,7 @@
 					<?php if (is_array($footer_social_profiles) && !empty($footer_social_profiles)) { ?>
 					<ul class="list-unstyled footer_social_icon">
 						<?php foreach ($footer_social_profiles as $key => $value) { ?>
-							<li><a href="<?php echo esc_url($value['footer_social_media_link']); ?>"><i class="<?php echo esc_attr($value['footer_social_icon']); ?>"></i></a></li>
+							<li><a class="<?php echo esc_attr($value['footer_social_icon']); ?>" href="<?php echo esc_url($value['footer_social_media_link']); ?>"></a></li>
 						<?php } ?>
 					</ul>
 					<?php }; ?>

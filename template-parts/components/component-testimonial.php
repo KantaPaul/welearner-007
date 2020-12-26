@@ -39,81 +39,85 @@ $testimonial = new WP_Query($testimonial_arrs);
 ?>
 
 <section class="welearner-testimonial-area default-spacer">
-    <div class="container">
-        <?php if (!empty($testimonial_area_heading) || !empty($testimonial_area_heading_content)) { ?>
-        <div class="row welearner-section-title-wraper">
-            <div class="col-sm-6">
-                <?php if (!empty($testimonial_area_heading)) { ?>
-                <h2 class="welearner-section-title"><?php echo esc_html($testimonial_area_heading); ?> </h2>
-                <?php } ?>
+    <div class="welearner-testimonial-wraper">
+        <div class="container">
+            <?php if (!empty($testimonial_area_heading) || !empty($testimonial_area_heading_content)) { ?>
+            <div class="row welearner-section-title-wraper welearner_testimonial_heading">
+                <div class="col-sm-6">
+                    <?php if (!empty($testimonial_area_heading)) { ?>
+                    <h2 class="welearner-section-title"><?php echo esc_html($testimonial_area_heading); ?> </h2>
+                    <?php } ?>
+                </div>
+                <div class="col-sm-6">
+                    <?php if (!empty($testimonial_area_heading_content)) { ?>
+                    <blockquote class="welearner-section-content"><?php echo esc_html($testimonial_area_heading_content); ?> </blockquote>
+                    <?php } ?>
+                </div>
             </div>
-            <div class="col-sm-6">
-                <?php if (!empty($testimonial_area_heading_content)) { ?>
-                <blockquote class="welearner-section-content"><?php echo esc_html($testimonial_area_heading_content); ?> </blockquote>
-                <?php } ?>
-            </div>
-        </div>
-        <?php } ?>
-        <?php if($testimonial->have_posts()) {  ?>
-        <div class="reviewer-content-wraper">
-            <div class="owl-carousel reviewer_carousel" data-slider-item="<?php echo esc_attr( $testimonial_area_items ); ?>" data-slider-loop="<?php echo esc_attr( $testimonial_slider_loop )?>" data-slider-autoplay="<?php echo esc_attr( $testimonial_slider_autoplay )?>">
-                <?php while($testimonial->have_posts()) {
-                    $testimonial->the_post();
-                    ?>
-                    <div class="testimonial_single_item">
-                        <?php if(has_post_thumbnail()) : ?>
-                        <div class="reviewr-thummb">
-                            <?php the_post_thumbnail('full'); ?>
-                        </div>
-                        <!-- // reviewer thumb -->
-                        <?php endif; ?>
+            <?php } ?>
+            <?php if($testimonial->have_posts()) {  ?>
+            <div class="reviewer-content-wraper">
+                <div class="owl-carousel reviewer_carousel" data-slider-item="<?php echo esc_attr( $testimonial_area_items ); ?>" data-slider-loop="<?php echo esc_attr( $testimonial_slider_loop )?>" data-slider-autoplay="<?php echo esc_attr( $testimonial_slider_autoplay )?>">
+                    <?php while($testimonial->have_posts()) {
+                        $testimonial->the_post();
 
-                        <div class="reviewer_content">
-                            <h2 class="reviewr_title"><?php the_title(); ?> </h2>
+                        $testimonial_reviewer_designation = '';
+                        $testimonial_reviewer_featured_text = '';
 
-                            <?php
-                                $testimonial_reviewer_designation = '';
-                                $testimonial_reviewer_featured_text = '';
-
-                                if(defined('FW')) {
-                                    $testimonial_reviewer_designation = fw_get_db_post_option(get_the_ID(), 'testimonial_reviewer_designation');
-                                    $testimonial_reviewer_featured_text = fw_get_db_post_option(get_the_ID(), 'testimonial_reviewer_featured_text');
-                                }
-                            ?>
-
-                            <?php if('' != $testimonial_reviewer_designation) : ?>
-                            <p class="testimonial_reviewer_designation">
-                                <?php echo esc_html($testimonial_reviewer_designation); ?>
-                            </p>
-                            <!-- //testimonial_reviewer_designation -->
+                        if(defined('FW')) {
+                            $testimonial_reviewer_designation = fw_get_db_post_option(get_the_ID(), 'testimonial_reviewer_designation');
+                            $testimonial_reviewer_featured_text = fw_get_db_post_option(get_the_ID(), 'testimonial_reviewer_featured_text');
+                        }
+                        ?>
+                        <div class="testimonial_single_item">
+                            <?php if(has_post_thumbnail()) : ?>
+                            <div class="testimonial_reviewr-thummb">
+                                <?php the_post_thumbnail('full'); ?>
+                            </div>
+                            <!-- // reviewer thumb -->
                             <?php endif; ?>
 
-                            <div class="reviewer-comment">
-                                <?php the_content(); ?>
-                            </div>
-                            <!-- // reviewer comment -->
+                            <div class="testimonial_reviewer_content">
+                                <div class="testimonial_reviewer_header">
+                                    <h4 class="testimonial_reviewr_title"><?php the_title(); ?> </h4>
 
-                            <?php if($testimonial_reviewer_featured_text != ''){ ?>
-                            <h3 class="testimonial_reviewer_featured_text">
-                                <?php echo wp_kses_post($testimonial_reviewer_featured_text); ?>
-                            </h3>
-                            <!-- // testimonial_reviewer_featured_text -->
-                            <?php } ?>
+                                    <?php if('' != $testimonial_reviewer_designation) : ?>
+                                    <p class="testimonial_reviewer_designation">
+                                        <?php echo esc_html($testimonial_reviewer_designation); ?>
+                                    </p>
+                                    <!-- //testimonial_reviewer_designation -->
+                                    <?php endif; ?>
+                                </div>
+                                <!-- // reviewer header -->
+
+                                <div class="testimonial_reviewer-comment">
+                                    <?php the_content(); ?>
+                                </div>
+                                <!-- // reviewer comment -->
+
+                                <?php if($testimonial_reviewer_featured_text != ''){ ?>
+                                <h5 class="testimonial_reviewer_featured_text">
+                                    <?php echo wp_kses_post($testimonial_reviewer_featured_text); ?>
+                                </h5>
+                                <!-- // testimonial_reviewer_featured_text -->
+                                <?php } ?>
+                            </div>
                         </div>
-                    </div>
-                    <!-- // reviewer single item -->
-                    <?php
-                } wp_reset_postdata();
-                ?>
+                        <!-- // reviewer single item -->
+                        <?php
+                    } wp_reset_postdata();
+                    ?>
+                </div>
+                <!-- // testimonial carousel -->
             </div>
-            <!-- // testimonial carousel -->
+            <!-- // carousel main wraper -->
+            <?php } else { ?>
+            <div class="alert alert-info" role="alert">
+                <strong><?php echo esc_html__('No testimonial Found', 'welearner'); ?></strong>
+            </div>
+            <?php } ?>
         </div>
-        <!-- // carousel main wraper -->
-        <?php } else { ?>
-        <div class="alert alert-info" role="alert">
-            <strong><?php echo esc_html__('No testimonial Found', 'welearner'); ?></strong>
-        </div>
-        <?php } ?>
     </div>
+    <?php get_template_part( 'template-parts/components/component', 'client' ); ?>
 </section>
 <!-- // testmonial section -->

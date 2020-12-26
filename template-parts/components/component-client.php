@@ -14,33 +14,29 @@ if(defined('FW')) {
     $client__title = "45+ million people are already learning on Welearners";
 }
 ?>
-<div class="welearner-section-client default-spacer">
-    <div class="container">
-        <div class="text-center">
-            <p class="client-section-title"><?php echo esc_html($client__title) ?> </p>
-        </div>
-        <!-- // heading -->
-        <div class="row">
+<div class="container">
+    <div class="text-center client-section-title-wraper">
+        <p class="client-section-title"><?php echo esc_html($client__title) ?> </p>
+    </div>
+    <!-- // heading -->
+    <div class="d-lg-flex justify-content-between align-items-center">
+        <?php
+        if(!empty($client_logos)) {
+            $client_logo_col = count($client_logos);
+            foreach($client_logos as $logo) {
+                if (!empty($logo)) {
+            ?>
+            <div class="clinet-logo">
+                <?php echo wp_get_attachment_image($logo['attachment_id'], 'full'); ?>
+            </div>
+            <!-- // client logo -->
             <?php
-            if(!empty($client_logos)) {
-                $client_logo_col = count($client_logos);
-                foreach($client_logos as $logo) {
-                    if (!empty($logo)) {
-                ?>
-                <div class="col">
-                    <div class="clinet-logo">
-                        <?php echo wp_get_attachment_image($logo['attachment_id'], 'full'); ?>
-                    </div>
-                </div>
-                <!-- // client logo -->
-                <?php
-                    }
                 }
             }
-            ?>
-        </div>
-        <!-- // row -->
+        }
+        ?>
     </div>
-    <!-- // container -->
+    <!-- // row -->
 </div>
+<!-- // container -->
 <!-- // client section -->

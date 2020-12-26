@@ -102,62 +102,6 @@ $options = array(
                     ),
                 ),
             ),
-            'call_to_action_section' => array(
-                'title' => __('Call To Action', 'welearner'),
-                'options' => array(
-                    'call_to_action_content' => array(
-                        'type' => 'addable-popup',
-                        'value' => array(
-                            array(
-                                'call_to_action_title' => 'Become an instructor',
-                                'call_to_action_exerpt' => 'Top instructors from around the world teach millions of students on Udemy. We provide the tools and skills to teach what you love.',
-                                'call_to_action_button_title' => 'Get Join',
-                                'call_to_action_button_url' => '#',
-                                'call_to_action_bg' => '#FFE2E2',
-                            ),
-                            array(
-                                'call_to_action_title' => 'Welearner for Business',
-                                'call_to_action_exerpt' => 'Get unlimited access to 4,000+ of We Learner’s top courses for your team.',
-                                'call_to_action_button_title' => 'Get Start',
-                                'call_to_action_button_url' => '#',
-                                'call_to_action_bg' => '#FEE5BD',
-                            ),
-                        ),
-                        'label' => __('Call To Action', 'welearner'),
-                        'add-button-text' => __('Add Call To Action', 'welearner'),
-                        'template' => '{{- call_to_action_title }}',
-                        'sortable' => true,
-                        'popup-options' => array(
-                            'call_to_action_title' => array(
-                                'label' => __('Title', 'welearner'),
-                                'type' => 'text',
-                                'value' => 'Become an instructor',
-                            ),
-                            'call_to_action_exerpt' => array(
-                                'label' => __('Exerpt', 'welearner'),
-                                'type' => 'textarea',
-                                'value' => 'Top instructors from around the world teach millions of students on Udemy. We provide the tools and skills to teach what you love.',
-                            ),
-                            'call_to_action_button_title' => array(
-                                'label' => __('Button Title', 'welearner'),
-                                'type' => 'text',
-                                'value' => 'Get Join',
-                            ),
-                            'call_to_action_button_url' => array(
-                                'label' => __('URL', 'welearner'),
-                                'type' => 'text',
-                                'value' => '#',
-                            ),
-                            'call_to_action_bg' => array(
-                                'type'  => 'rgba-color-picker',
-                                'value' => '#FFE2E2',
-                                'palettes' => array( '#FFE2E2', '#FEE5BD' ),
-                                'label' => __('Background Color', 'welearner'),
-                            )
-                        ),
-                    )
-                ),
-            ),
             'footer_section' => array(
                 'title' => __('Footer', 'welearner'),
                 'options' => array(

@@ -20,7 +20,7 @@
     $courses = new WP_Query($course_arr);
 ?>
 
-<section class="welearner-toprated-course-area default-spacer">
+<section class="welearner-toprated-course-area">
     <div class="container">
         <?php
             new Welearner\Heading\Welearner_Heading_Class($toprated_course_area_heading, $toprated_course_area_button_text, $toprated_course_area_button_url);

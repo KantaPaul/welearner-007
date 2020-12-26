@@ -38,16 +38,20 @@ $creators = new WP_Query($createor_arr);
 
 ?>
 
-<section class="welearner-section-creator default-spacer">
+<section class="welearner-section-creator">
     <div class="container">
         <?php if (!empty($creator_area_heading) || !empty($creator_area_heading_content)) { ?>
-        <div class="welearner-section-title-wraper text-center">
-            <?php if (!empty($creator_area_heading)) { ?>
-            <h2 class="welearner-section-title"><?php echo esc_html($creator_area_heading); ?> </h2>
-            <?php } ?>
-            <?php if (!empty($creator_area_heading_content)) { ?>
-            <p class="welearner-section-content"><?php echo esc_html($creator_area_heading_content); ?> </p>
-            <?php } ?>
+        <div class="row">
+            <div class="col-lg-6 mx-auto">
+                <div class="welearner-section-title-wraper welearner-creator-heading text-center">
+                    <?php if (!empty($creator_area_heading)) { ?>
+                    <h2 class="welearner-section-title"><?php echo esc_html($creator_area_heading); ?> </h2>
+                    <?php } ?>
+                    <?php if (!empty($creator_area_heading_content)) { ?>
+                    <p class="welearner-section-content"><?php echo esc_html($creator_area_heading_content); ?> </p>
+                    <?php } ?>
+                </div>
+            </div>
         </div>
         <!-- // team heading info -->
         <?php } ?>
@@ -58,6 +62,13 @@ $creators = new WP_Query($createor_arr);
             <?php
                 while($creators->have_posts()) {
                     $creators->the_post();
+
+                    $social_profiles = [];
+                    $creator_designation = '';
+                    if(defined('FW')) {
+                        $social_profiles = fw_get_db_post_option(get_the_ID(), 'creator_social_profiles');
+                        $creator_designation = fw_get_db_post_option(get_the_ID(), 'creator_designation');
+                    }
                     ?>
                     <div class="single_creator_item">
                         <?php if(has_post_thumbnail()) { ?>
@@ -66,13 +77,6 @@ $creators = new WP_Query($createor_arr);
                                 <?php  the_post_thumbnail([354, 354]); ?>
                             </a>
                             <!-- // creator thumb -->
-
-                            <?php
-                                $social_profiles = [];
-                                if(defined('FW')) {
-                                    $social_profiles = fw_get_db_post_option(get_the_ID(), 'creator_social_profiles');
-                                }
-                            ?>
                             <?php if(!empty($social_profiles)) { ?>
                             <div class="team-social-icon">
                                 <ul class="list-unstyled social-media-profile">
@@ -95,14 +99,9 @@ $creators = new WP_Query($createor_arr);
                         <?php  }; ?>
 
                         <div class="creator-meta-info">
-                            <h2 class="creator_name"><?php the_title(); ?></h2>
-                            <?php
-                                $creator_designation = '';
-                                if(defined('FW')) {
-                                    $creator_designation = fw_get_db_post_option(get_the_ID(), 'creator_designation');
-                                }
-                            ?>
-
+                            <h4 class="creator_name">
+                                <a href="<?php echo esc_url(get_the_permalink()); ?>"><?php the_title(); ?></a>
+                            </h4>
                             <?php if(!empty($creator_designation)) { ?>
                             <span class="creator_designation"><?php echo esc_html($creator_designation); ?> </span>
                             <?php }; ?>
@@ -120,6 +119,9 @@ $creators = new WP_Query($createor_arr);
             </div>
         <?php }
         ?>
+    </div>
+    <div class="bg_image_shape">
+        <img src="<?php echo esc_attr(get_template_directory_uri(  ) . '/assets/images/team_bg_shpae.png'); ?>" alt="bg shape">
     </div>
 </section>
 <!-- // creator section -->

@@ -110,3 +110,5 @@ package.json
 phpcs.xml.dist
 package-lock.json
 style.css.map
+
+false/
