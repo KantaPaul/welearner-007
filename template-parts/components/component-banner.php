@@ -4,28 +4,28 @@
     }
     $banner_heading = "";
     $banner_content = "";
-    $banner_image   = "";
+    $banner_bg_color   = "";
     $top_banner_search_show = "";
     if(defined('FW')) {
         $banner_heading         = fw_get_db_customizer_option('top_banner_heading');
         $banner_content         = fw_get_db_customizer_option('top_banner_content');
-        $banner_image           = fw_get_db_customizer_option('top_banner_background');
+        $banner_bg_color           = fw_get_db_customizer_option('top_banner_background');
         $top_banner_search_show = fw_get_db_customizer_option('top_banner_search_show');
     } else {
         $top_banner_search_show = "true";
         $banner_heading         = "Discover a new way of learning ";
         $banner_content         = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper dapibus turpis vel pellentesque. ";
-        $banner_image           = get_template_directory_uri(  ) . '/assets/images/banner_memphis.png';
+        $banner_bg_color           = "#3028AF";
     }
 
-    if (empty($banner_image)) {
-        $banner_image = "#3028AF";
+    if (empty($banner_bg_color)) {
+        $banner_bg_color = "#3028AF";
     } else {
-        $banner_image = $banner_image;
+        $banner_bg_color = $banner_bg_color;
     }
 ?>
 
-<div class="welearner-banner_area" style="background-color: <?php echo esc_attr( $banner_image ); ?>" id="home_section">
+<div class="welearner-banner_area" style="background-color: <?php echo esc_attr( $banner_bg_color ); ?>" id="home_section">
     <div class="welearner_banner_memphis memphis_one">
         <img src="<?php echo esc_attr( get_template_directory_uri(  ) . '/assets/images/banner_memphis.png' ); ?>" alt="memphis one">
     </div>

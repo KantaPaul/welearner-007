@@ -26,10 +26,12 @@ if (!empty($header_button_two_show)) {
 			</a>
 			<?php } ?>
 			<!-- // navbar brand -->
+			<?php if (has_nav_menu('primary_menu')) { ?>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primary_nav" aria-controls="primary_nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<!-- // navbar toggle -->
+			<?php } ?>
 			<div class="collapse navbar-collapse" id="primary_nav">
 				<?php
 					wp_nav_menu(
@@ -43,7 +45,7 @@ if (!empty($header_button_two_show)) {
 					);
 				?>
 				<!-- // navbar-nav ml-auto -->
-				<ul class="header_control list-unstyled">
+				<ul class="header_control list-unstyled <?php echo esc_attr( has_nav_menu('primary_menu') ? "": "ml-auto")?>">
 					<li>
 						<?php if (is_user_logged_in()) { ?>
 						<a class="btn-login" href="<?php echo wp_logout_url(); ?>" title="<?php esc_attr_e( 'Logout', 'welearner' ); ?>">

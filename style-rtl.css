@@ -694,6 +694,7 @@ textarea {
 
 .welearner-banner_area {
   position: relative;
+  background-color: #3028AF;
   overflow: hidden; }
   .welearner-banner_area > .container {
     z-index: 2;

@@ -1,4 +1,5 @@
-.default-spacer {
+.default-spacer,
+.site-main {
     @include potrait-tablet-upper {
         padding: {
             top: rem(120px);
