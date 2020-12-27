@@ -32,7 +32,12 @@
 }
 
 .welearner-testimonial-wraper {
-    padding-bottom: rem(150px);
+    @include potrait-tablet-upper {
+        padding-bottom: rem(150px);
+    }
+    @include potrait-tablet {
+        padding-bottom: rem(150px / 2);
+    }
 }
 
 .welearner-testimonial-area {

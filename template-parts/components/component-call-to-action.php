@@ -3,7 +3,7 @@
         die('Direct access forbidden.');
     }
 ?>
-<div class="coll-to-action-secton">
+<div class="call-to-action-secton">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">

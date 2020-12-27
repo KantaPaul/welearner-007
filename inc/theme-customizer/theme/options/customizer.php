@@ -9,10 +9,10 @@ $options = array(
             'top_banner__section' => array(
                 'title' => __('Banner Options', 'welearner'),
                 'options' => array(
-                    'top_banner_image' => [
-                        'type'  => 'upload',
-                        'label' => __('Banner Image', 'welearner'),
-                        'images_only' => true,
+                    'top_banner_background' => [
+                        'type'  => 'rgba-color-picker',
+                        'value' => '#3028AF',
+                        'label' => __('Banner Color', 'welearner'),
                     ],
                     'top_banner_heading' => array(
                         'label' => __('Banner title', 'welearner'),
@@ -109,11 +109,6 @@ $options = array(
                         'type'  => 'rgba-color-picker',
                         'value' => '#021E40',
                         'label' => __('Footer Color', 'welearner'),
-                    ),
-                    'footer_background_image' => array(
-                        'type'  => 'upload',
-                        'label' => __('Footer Background', 'welearner'),
-                        'images_only' => true,
                     ),
                     'footer_logo' => array(
                         'type'  => 'upload',

@@ -1,7 +1,12 @@
 .welearner-topic-list {
     border: 1px solid #E8EAEC;
     border-radius: rem(14px);
-    margin-bottom: rem(60px);
+    @include potrait-tablet-upper {
+        margin-bottom: rem(60px);
+    }
+    @include potrait-tablet {
+        margin-bottom: rem(60px / 2);
+    }
     padding: {
         left: rem(30px);
         top: rem(14px);

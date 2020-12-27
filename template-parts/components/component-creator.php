@@ -38,7 +38,7 @@ $creators = new WP_Query($createor_arr);
 
 ?>
 
-<section class="welearner-section-creator">
+<section class="welearner-section-creator" id="creator_section">
     <div class="container">
         <?php if (!empty($creator_area_heading) || !empty($creator_area_heading_content)) { ?>
         <div class="row">

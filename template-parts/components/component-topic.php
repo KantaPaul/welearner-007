@@ -15,7 +15,7 @@
     ) );
 ?>
 <?php if (is_array($topics) && !empty($topics)) { ?>
-<section class="welearner-section-topic default-spacer">
+<section class="welearner-section-topic" id="topic_section">
     <div class="container">
         <?php
             new Welearner\Heading\Welearner_Heading_Class($topic_area_heading, $topic_area_button_text, $topic_area_button_url);
@@ -52,7 +52,7 @@
                         }
                     }
                 ?>
-                    <div class="col-md-4 col-lg-3">
+                    <div class="col-md-6 col-lg-3">
                         <a href="<?php echo esc_url(get_term_link($topic->slug, 'topic')); ?>" class="welearner-topic-list media align-items-center">
                             <div class="topic_icon d-flex justify-content-center align-items-center" style="background-color: <?php echo esc_attr( $topic_icon_background )?>">
                                 <?php

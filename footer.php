@@ -12,7 +12,6 @@
 		$footer_logo             = fw_get_db_customizer_option('footer_logo');
 		$footer_text             = fw_get_db_customizer_option('footer_text');
 		$footer_social_profiles  = fw_get_db_customizer_option('footer_social_profiles');
-		$footer_background_image = fw_get_db_customizer_option('footer_background_image');
 		$footer_background_color = fw_get_db_customizer_option('footer_background_color');
 	} else {
 		$footer_text = esc_html__( "Lorem ipsum dolor sit amet, consectetur
@@ -21,7 +20,10 @@
 	}
 ?>
 
-<footer class="site-footer" style="background-color: <?php echo esc_attr( $footer_background_color ); ?>; <?php echo esc_attr( !empty($footer_background_image) ? "background-image: url(".$footer_background_image['url'].")" : ""); ?>">
+<footer class="site-footer" style="background-color: <?php echo esc_attr( $footer_background_color ); ?>">
+	<div class="footer_banner_memphis">
+		<img src="<?php echo esc_attr( get_template_directory_uri(  ) . '/assets/images/footer_banner_shape.png' ); ?>" alt="footer memphis">
+	</div>
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4">

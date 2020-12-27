@@ -11,13 +11,28 @@ h6 {
 }
 
 h1 {
-	font-size: $h1;
+	@include potrait-tablet-upper {
+		font-size: $h1;
+	}
+	@include potrait-tablet {
+		font-size: $h1 / 2;
+	}
 }
 h2 {
-	font-size: $h2;
+	@include potrait-tablet-upper {
+		font-size: $h2;
+	}
+	@include potrait-tablet {
+		font-size: $h2 / 2;
+	}
 }
 h3 {
-	font-size: $h3;
+	@include potrait-tablet-upper {
+		font-size: $h3;
+	}
+	@include potrait-tablet {
+		font-size: rem(16px);
+	}
 }
 h4 {
 	font-size: $h4;

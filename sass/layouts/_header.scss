@@ -1,19 +1,28 @@
 .header-light {
     @include potrait-tablet-upper {
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        z-index: 5;
+        &:not(.fixed-top) {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            z-index: 5;
+        }
         .navbar-brand {
             color: $color_white;
         }
     }
+    @include potrait-tablet {
+        background-color: rgba(0,0,0, .5);
+    }
 }
-@include potrait-tablet-upper {
-    .admin-bar {
-        .header-light {
+.admin-bar {
+    .header-light,
+    .header-fixed {
+        @include potrait-tablet-upper {
             top: 32px;
+        }
+        @include potrait-tablet {
+            top: 46px;
         }
     }
 }
@@ -63,10 +72,13 @@
     }
     > li {
         > a {
-            padding: 5px 10px;
             display: block;
+            @include potrait-tablet {
+                padding: rem(15px) rem(5px);
+            }
+            color: $color_white;
             @include potrait-tablet-upper {
-                color: $color_white;
+                padding: rem(5px) rem(15px);
                 &:hover {
                     color: rgba($color: $color_white, $alpha: .5);
                 }
@@ -76,9 +88,16 @@
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 .navbar-toggler {
-    color: rgba(0,0,0,.5);
-    border-color: rgba(0,0,0,.1);
+    color: rgba($color_white, 5);
+    border-color: rgba($color_white, 1);
+}
+
+.header-fixed {
+    transition: background-color .4s ease;
+    &.fixed-top {
+        background-color: $color_primary;
+    }
 }

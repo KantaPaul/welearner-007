@@ -1,7 +1,9 @@
 .welearner-section-title {
     margin-bottom: 0;
-    line-height: (60px / 44px);
-    letter-spacing: letter_spacing(-42);
+    @include potrait-tablet-upper {
+        line-height: (60px / 44px);
+        letter-spacing: letter_spacing(-42);
+    }
 }
 
 .welearner-section-title-wraper {
@@ -13,11 +15,19 @@
         @include potrait-tablet-upper {
             padding-right: rem(200px);
         }
+        @include potrait-tablet {
+            margin-bottom: rem(40px);
+        }
     }
 }
 
 blockquote {
-    font-size: rem(20px);
+    @include potrait-tablet-upper {
+        font-size: rem(20px);
+    }
+    @include potrait-tablet {
+        font-size: rem(16px);
+    }
     font-weight: 700;
     font-family: $font__title;
     position: relative;

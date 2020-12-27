@@ -38,7 +38,7 @@ $testimonial = new WP_Query($testimonial_arrs);
 
 ?>
 
-<section class="welearner-testimonial-area default-spacer">
+<section class="welearner-testimonial-area default-spacer" id="review_section">
     <div class="welearner-testimonial-wraper">
         <div class="container">
             <?php if (!empty($testimonial_area_heading) || !empty($testimonial_area_heading_content)) { ?>

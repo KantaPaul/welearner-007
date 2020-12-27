@@ -1,7 +1,13 @@
 .welearner-section-blog {
     position: relative;
-    padding-top: rem(98px);
-    padding-bottom: rem(159px);
+    @include potrait-tablet-upper {
+        padding-top: rem(98px);
+        padding-bottom: rem(159px);
+    }
+    @include potrait-tablet {
+        padding-top: rem(98px / 2);
+        padding-bottom: rem(159px / 2);
+    }
     > .container {
         position: relative;
         z-index: 5;
@@ -43,5 +49,10 @@
         &:hover {
             color: $color_primary;
         }
+    }
+}
+.blog-post {
+    @include potrait-tablet {
+        margin-bottom: rem(30px);
     }
 }

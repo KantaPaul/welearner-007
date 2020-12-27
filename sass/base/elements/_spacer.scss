@@ -1,8 +1,16 @@
 .default-spacer {
-    padding: {
-        top: rem(127px);
-        bottom: rem(127px);
-    };
+    @include potrait-tablet-upper {
+        padding: {
+            top: rem(120px);
+            bottom: rem(120px);
+        };
+    }
+    @include potrait-tablet {
+        padding: {
+            top: rem(120px / 2);
+            bottom: rem(120px / 2);
+        };
+    }
 }
 
 .welearner-section-topic {

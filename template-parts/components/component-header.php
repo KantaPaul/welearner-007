@@ -15,18 +15,16 @@ if (!empty($header_button_two_show)) {
 }
 
 ?>
-<header class="header-standard header-light">
+<header class="header-standard header-light header-fixed">
 	<div class="container">
 		<div class="navbar navbar-expand-lg">
+			<?php if(has_custom_logo()) {
+				the_custom_logo();
+			} else { ?>
 			<a href="<?php echo home_url( '/' ); ?>" class="navbar-brand">
-			<?php
-				if(has_custom_logo()) {
-					the_custom_logo();
-				}else {
-					bloginfo( 'name' );
-				}
-			?>
+				<?php bloginfo( 'name' ); ?>
 			</a>
+			<?php } ?>
 			<!-- // navbar brand -->
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#primary_nav" aria-controls="primary_nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>

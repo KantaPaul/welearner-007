@@ -1,15 +1,19 @@
 .welearner-banner_area {
-    min-height: rem(904px);
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-size: cover;
+    position: relative;
+    overflow: hidden;
     > .container {
-        width: 100%;
-        flex: 0 0 100%;
+        z-index: 2;
+        position: relative;
     }
 }
 
-.welearner-banner-main-content {
+.welearner-banner-main-content-wrapper {
+    @include potrait-tablet-upper {
+        min-height: rem(904px);
+    }
+    @include potrait-tablet {
+        min-height: rem(500px);
+    }
     color: $color_white;
 }
 
@@ -25,16 +29,21 @@
 
 .welearner_banner_content {
     font-size: rem(20px);
-    line-height: (40px / 20px);
     @include potrait-tablet-upper {
+        line-height: (40px / 20px);
         margin-bottom: rem(41px);
     }
 }
 
 .welearner-course-search-form {
     position: relative;
+    z-index: 10;
     .form-control {
         height: auto;
+        @include potrait-tablet {
+            margin-bottom: rem(20px);
+            padding: rem(15px);
+        }
     }
     @include potrait-tablet-upper() {
         .form-control {
@@ -52,5 +61,34 @@
             font-size: rem(18px);
             padding: rem(15px) rem(59px);
         }
+    }
+}
+
+
+.welearner_banner_memphis {
+    @include potrait-tablet-upper {
+        position: absolute;
+        pointer-events: none;
+        &.memphis_one {
+            bottom: rem(-38px);
+            left: rem(-67px);
+        }
+        &.memphis_two {
+            right: 0;
+            top: 0;
+        }
+    }
+    @include potrait-tablet {
+        display: none;
+    }
+}
+
+.banner_man_image {
+    @include potrait-tablet-upper {
+        margin-left: rem(-223px);
+        margin-right: rem(-88px);
+    }
+    @include potrait-tablet {
+        display: none;
     }
 }

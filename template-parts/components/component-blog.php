@@ -19,7 +19,7 @@
     $blog_post = new WP_Query($arrs_post);
 ?>
 
-<section class="welearner-section-blog">
+<section class="welearner-section-blog" id="blog_section">
     <div class="container">
         <?php if (!empty($blog_area_heading)) { ?>
         <div class="welearner-section-title-wraper ">

@@ -7,7 +7,7 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main default-spacer">
 
 		<?php
 		while ( have_posts() ) :

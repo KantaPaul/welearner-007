@@ -5,3 +5,10 @@
 .client-section-title-wraper {
     margin-bottom: rem(70px);
 }
+@include potrait-tablet {
+    .clinet-logo {
+        margin-bottom: rem(30px);
+        display: inline-block;
+        margin-right: rem(30px);
+    }
+}

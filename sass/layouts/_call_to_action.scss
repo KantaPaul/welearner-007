@@ -15,10 +15,15 @@
     }
 }
 .single_call_to_action {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    @include potrait-tablet-upper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    @include potrait-tablet {
+        margin-bottom: rem(30px);
+    }
     padding: {
         top: rem(47px);
         bottom: rem(60px);
@@ -33,6 +38,6 @@
     }
 }
 
-.coll-to-action-secton {
-    padding-bottom: rem(120px);
+.call-to-action-secton {
+    // padding-bottom: rem(120px);
 }
