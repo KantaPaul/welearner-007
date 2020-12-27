@@ -150,3 +150,6 @@ require_once get_template_directory(  ) . '/inc/hooks/install-fragments/tgmpa-pl
 
 // theme demos
 require_once get_template_directory(  ) . '/inc/hooks/install-fragments/theme-demos.php';
+
+// register widget
+require_once get_template_directory(  ) . '/inc/widgets/widgets.php';

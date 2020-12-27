@@ -10,7 +10,7 @@ if ( function_exists('register_sidebar') ) {
         'after_widget'  => '</div></div>',
         'before_title'  => '<h4 class="widgets-title">',
         'after_title'   => '</h4>',
-        'name'          => __( 'Footer 1', 'welerner-assistance' ),
+        'name'          => __( 'Footer 1', 'welerner' ),
     );
     $footer_widget_two = array(
         'id'            => 'widget_two',
@@ -18,7 +18,7 @@ if ( function_exists('register_sidebar') ) {
         'after_widget'  => '</div></div>',
         'before_title'  => '<h4 class="widgets-title">',
         'after_title'   => '</h4>',
-        'name'          => __( 'Footer 2', 'welerner-assistance' ),
+        'name'          => __( 'Footer 2', 'welerner' ),
     );
     $footer_widget_three = array(
         'id'            => 'widget_three',
@@ -26,7 +26,7 @@ if ( function_exists('register_sidebar') ) {
         'after_widget'  => '</div></div>',
         'before_title'  => '<h4 class="widgets-title">',
         'after_title'   => '</h4>',
-        'name'          => __( 'Footer 3', 'welerner-assistance' ),
+        'name'          => __( 'Footer 3', 'welerner' ),
     );
     $footer_widget_four = array(
         'id'            => 'widget_four',
@@ -34,7 +34,7 @@ if ( function_exists('register_sidebar') ) {
         'after_widget'  => '</div></div>',
         'before_title'  => '<h4 class="widgets-title">',
         'after_title'   => '</h4>',
-        'name'          => __( 'Footer 4', 'welerner-assistance' ),
+        'name'          => __( 'Footer 4', 'welerner' ),
     );
 
     register_sidebar($footer_widget_one);
