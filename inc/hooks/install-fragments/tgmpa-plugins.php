@@ -9,12 +9,12 @@
 function _action_welearner_register_required_plugins() {
 	$plugins	 = array(
 		array(
-			'name'		 => esc_html__( 'Unyson', 'marketo' ),
+			'name'		 => esc_html__( 'Unyson', 'welearner' ),
 			'slug'		 => 'unyson',
 			'required'	 => true,
 		),
 		array(
-			'name'		 => esc_html__( 'Welearner Features', 'marketo' ),
+			'name'		 => esc_html__( 'Welearner Features', 'welearner' ),
 			'slug'		 => 'welearner-features',
 			'required'	 => true,
             'version'    => '1.0',

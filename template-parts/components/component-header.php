@@ -62,7 +62,7 @@ if (!empty($header_button_two_show)) {
 
 					<?php if (!empty($header_button_two_title) || $header_button_two_show === "true") { ?>
 					<li>
-						<a href="<?php echo esc_url( $header_button_two_url ); ?>" title="<?php esc_attr_e( 'Login' ); ?>" class="btn btn-header">
+						<a href="<?php echo esc_url( $header_button_two_url ); ?>" title="<?php echo esc_attr( 'Login' ); ?>" class="btn btn-header">
 							<?php echo esc_html( $header_button_two_title ); ?>
 						</a>
 						<!-- // button two -->

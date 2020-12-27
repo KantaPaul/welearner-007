@@ -6,7 +6,7 @@ if (!function_exists('_filter_welearner_fw_ext_backups_demos')) {
         $demo_content_installer	 = get_template_directory_uri(  ) . '/demo-content';
         $demos_array			 = array(
             'default'			 => array(
-                'title'			 => esc_html__( 'Default', 'marketo' ),
+                'title'			 => esc_html__( 'Default', 'welearner' ),
                 'screenshot'	 => $demo_content_installer . '/default/screenshot.png',
             ),
         );
@@ -23,6 +23,6 @@ if (!function_exists('_filter_welearner_fw_ext_backups_demos')) {
         }
         return $demos;
     }
-    
+
     add_filter( 'fw:ext:backups-demo:demos', '_filter_welearner_fw_ext_backups_demos' );
 }
