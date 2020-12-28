@@ -9,10 +9,7 @@
 if (!defined('ABSPATH')) {
 	die('Direct access forbidden.');
 }
-if ( ! defined( '_S_VERSION' ) ) {
-	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0' );
-}
+define( 'WELEARNER_VERSION', '1.0' );
 define( 'WELEARNER_TEMPLATE_DIRECTORY_URI', get_template_directory_uri() );
 define( 'WELEARNER_REMOTE_URL', get_template_directory() . '/demo-content' );
 define( 'WELEARNER_CSS', WELEARNER_TEMPLATE_DIRECTORY_URI . '/assets/css/' );
