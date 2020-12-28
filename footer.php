@@ -20,6 +20,8 @@
 	}
 ?>
 
+</div>
+
 <footer class="site-footer" style="background-color: <?php echo esc_attr( $footer_background_color ); ?>">
 	<div class="footer_banner_memphis">
 		<img src="<?php echo esc_attr( get_template_directory_uri(  ) . '/assets/images/footer_banner_shape.png' ); ?>" alt="footer memphis">
@@ -83,7 +85,6 @@
 
 
 <?php wp_footer(); ?>
-</div>
 
 </body>
 </html>

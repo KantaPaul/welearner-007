@@ -15,7 +15,7 @@
         $top_banner_search_show = "true";
         $banner_heading         = "Discover a new way of learning ";
         $banner_content         = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper dapibus turpis vel pellentesque. ";
-        $banner_bg_color           = "#3028AF";
+        $banner_bg_color        = "#3028AF";
     }
 
     if (empty($banner_bg_color)) {

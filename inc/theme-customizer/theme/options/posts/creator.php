@@ -40,24 +40,24 @@ $options = array(
                         ],
                     ),
                 ),
-                'label' => __('Creator Social media', 'welearner'),
+                'label' => esc_html__('Creator Social media', 'welearner'),
                 'template' => '{{- social_media_title }}',
-                'add-button-text' => __('Add Social', 'welearner'),
+                'add-button-text' => esc_html__('Add Social', 'welearner'),
                 'popup-options' => array(
                     'social_media_title' => array(
-                        'label' => __('Title', 'welearner'),
+                        'label' => esc_html__('Title', 'welearner'),
                         'type' => 'text',
                     ),
                     'social_media_link' => array(
-                        'label' => __('Social media link', 'welearner'),
+                        'label' => esc_html__('Social media link', 'welearner'),
                         'type' => 'text',
                     ),
                     'social_icon' => array(
                         'type'  => 'icon-v2',
-                        'label' => __('Social Media Icon', 'welearner'),
+                        'label' => esc_html__('Social Media Icon', 'welearner'),
                     ),
                 ),
             ),
         )
-    )            
+    )
 );

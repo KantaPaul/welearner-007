@@ -12,7 +12,7 @@ if ( function_exists('register_sidebar') ) {
                 'after_widget'  => '</div></div>',
                 'before_title'  => '<h4 class="widgets-title">',
                 'after_title'   => '</h4>',
-                'name'          => __( 'Footer 1', 'welearner' ),
+                'name'          => esc_html__( 'Footer 1', 'welearner' ),
             );
             $footer_widget_two = array(
                 'id'            => 'widget_two',
@@ -20,7 +20,7 @@ if ( function_exists('register_sidebar') ) {
                 'after_widget'  => '</div></div>',
                 'before_title'  => '<h4 class="widgets-title">',
                 'after_title'   => '</h4>',
-                'name'          => __( 'Footer 2', 'welearner' ),
+                'name'          => esc_html__( 'Footer 2', 'welearner' ),
             );
             $footer_widget_three = array(
                 'id'            => 'widget_three',
@@ -28,7 +28,7 @@ if ( function_exists('register_sidebar') ) {
                 'after_widget'  => '</div></div>',
                 'before_title'  => '<h4 class="widgets-title">',
                 'after_title'   => '</h4>',
-                'name'          => __( 'Footer 3', 'welearner' ),
+                'name'          => esc_html__( 'Footer 3', 'welearner' ),
             );
             $footer_widget_four = array(
                 'id'            => 'widget_four',
@@ -36,13 +36,22 @@ if ( function_exists('register_sidebar') ) {
                 'after_widget'  => '</div></div>',
                 'before_title'  => '<h4 class="widgets-title">',
                 'after_title'   => '</h4>',
-                'name'          => __( 'Footer 4', 'welearner' ),
+                'name'          => esc_html__( 'Footer 4', 'welearner' ),
+            );
+            $sidebar_widget_one = array(
+                'id'            => 'sidebar-1',
+                'before_widget' => '<div class="%2$s"><div class="widget-holder">',
+                'after_widget'  => '</div></div>',
+                'before_title'  => '<h4 class="widgets-title">',
+                'after_title'   => '</h4>',
+                'name'          => esc_html__( 'Sidebar Widget', 'welearner' ),
             );
 
             register_sidebar($footer_widget_one);
             register_sidebar($footer_widget_two);
             register_sidebar($footer_widget_three);
             register_sidebar($footer_widget_four);
+            register_sidebar($sidebar_widget_one);
         }
     }
 }

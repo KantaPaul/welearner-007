@@ -4,43 +4,46 @@
  */
 $options = array(
     'panel_1' => array(
-        'title' => __('Welernar options', 'welearner'),
+        'title' => esc_html__('Welernar Options', 'welearner'),
+        'wp-customizer-args' => [
+			'priority' => 1,
+		],
         'options' => array(
             'top_banner__section' => array(
-                'title' => __('Banner Options', 'welearner'),
+                'title' => esc_html__('Banner Options', 'welearner'),
                 'options' => array(
                     'top_banner_background' => [
                         'type'  => 'rgba-color-picker',
                         'value' => '#3028AF',
-                        'label' => __('Banner Color', 'welearner'),
+                        'label' => esc_html__('Banner Color', 'welearner'),
                     ],
                     'top_banner_heading' => array(
-                        'label' => __('Banner title', 'welearner'),
+                        'label' => esc_html__('Banner title', 'welearner'),
                         'type' => 'text',
                         'value' => esc_html__( 'Discover a new way of learning ', 'welearner' ),
                     ),
                     'top_banner_content' => array(
-                        'label' => __('Banner Content', 'welearner'),
+                        'label' => esc_html__('Banner Content', 'welearner'),
                         'type' => 'textarea',
                         'value' => esc_html__( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ullamcorper dapibus turpis vel pellentesque.  ', 'welearner' ),
                     ),
                     'top_banner_search_show' => array(
                         'type'  => 'switch',
                         'value' => 'true',
-                        'label' => __('Show Search', 'welearner'),
+                        'label' => esc_html__('Show Search', 'welearner'),
                         'left-choice' => array(
                             'value' => 'false',
-                            'label' => __('No', 'welearner'),
+                            'label' => esc_html__('No', 'welearner'),
                         ),
                         'right-choice' => array(
                             'value' => 'true',
-                            'label' => __('Yes', 'welearner'),
+                            'label' => esc_html__('Yes', 'welearner'),
                         ),
                     )
                 )
             ),
             'counter_up_section' => array(
-                'title' => __('Counter Up', 'welearner'),
+                'title' => esc_html__('Counter Up', 'welearner'),
                 'options' => array(
                     'counter_up_content' => array(
                         'type' => 'addable-popup',
@@ -61,23 +64,23 @@ $options = array(
                                 'counter_up_title' => 'Degrees & Master Track',
                             ),
                         ),
-                        'label' => __('Counter UP', 'welearner'),
-                        'add-button-text' => __('Add Counter', 'welearner'),
+                        'label' => esc_html__('Counter UP', 'welearner'),
+                        'add-button-text' => esc_html__('Add Counter', 'welearner'),
                         'template' => '{{- counter_up_title }}',
                         'sortable' => true,
                         'popup-options' => array(
                             'counter_up_count' => array(
-                                'label' => __('Number', 'welearner'),
+                                'label' => esc_html__('Number', 'welearner'),
                                 'type' => 'text',
                                 'value' => '3900',
                             ),
                             'counter_up_suffix' => array(
-                                'label' => __('Suffix', 'welearner'),
+                                'label' => esc_html__('Suffix', 'welearner'),
                                 'type' => 'text',
                                 'value' => '+',
                             ),
                             'counter_up_title' => array(
-                                'label' => __('Title', 'welearner'),
+                                'label' => esc_html__('Title', 'welearner'),
                                 'type' => 'textarea',
                                 'value' => 'Course & Apecializations',
                             ),
@@ -86,37 +89,37 @@ $options = array(
                 ),
             ),
             'client_logo_section' => array(
-                'title' => __('Client Logo', 'welearner'),
+                'title' => esc_html__('Client Logo', 'welearner'),
                 'options' => array(
                     'client__title' => array(
-                        'label' => __('Client Heading', 'welearner'),
+                        'label' => esc_html__('Client Heading', 'welearner'),
                         'type' => 'text',
                         'value' => esc_html__( 'Trusted by content creators across the world', 'welearner' ),
                     ),
                     'client_logos' => array(
                         'type'  => 'addable-option',
-                        'label' => __('Add Client Logo', 'welearner'),
+                        'label' => esc_html__('Add Client Logo', 'welearner'),
                         'option' => array( 'type' => 'upload' ),
-                        'add-button-text' => __('Uplaod Logo', 'welearner'),
+                        'add-button-text' => esc_html__('Uplaod Logo', 'welearner'),
                         'sortable' => true,
                     ),
                 ),
             ),
             'footer_section' => array(
-                'title' => __('Footer', 'welearner'),
+                'title' => esc_html__('Footer', 'welearner'),
                 'options' => array(
                     'footer_background_color' => array(
                         'type'  => 'rgba-color-picker',
                         'value' => '#021E40',
-                        'label' => __('Footer Color', 'welearner'),
+                        'label' => esc_html__('Footer Color', 'welearner'),
                     ),
                     'footer_logo' => array(
                         'type'  => 'upload',
-                        'label' => __('Footer Logo', 'welearner'),
+                        'label' => esc_html__('Footer Logo', 'welearner'),
                         'images_only' => true,
                     ),
                     'footer_text' => array(
-                        'label' => __('Exerpt', 'welearner'),
+                        'label' => esc_html__('Exerpt', 'welearner'),
                         'type' => 'textarea',
                         'value' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed justo nulla, ',
                     ),
@@ -139,22 +142,22 @@ $options = array(
                                 'footer_social_icon' => 'dashicons dashicons-linkedin',
                             ),
                         ),
-                        'label' => __('Social Media', 'welearner'),
+                        'label' => esc_html__('Social Media', 'welearner'),
                         'template' => '{{- footer_social_media_title }}',
-                        'add-button-text' => __('Add Social', 'welearner'),
+                        'add-button-text' => esc_html__('Add Social', 'welearner'),
                         'sortable' => true,
                         'popup-options' => array(
                             'footer_social_media_title' => array(
-                                'label' => __('Title', 'welearner'),
+                                'label' => esc_html__('Title', 'welearner'),
                                 'type' => 'text',
                             ),
                             'footer_social_media_link' => array(
-                                'label' => __('Social media link', 'welearner'),
+                                'label' => esc_html__('Social media link', 'welearner'),
                                 'type' => 'text',
                             ),
                             'footer_social_icon' => array(
                                 'type'  => 'icon',
-                                'label' => __('Social Media Icon', 'welearner'),
+                                'label' => esc_html__('Social Media Icon', 'welearner'),
                             ),
                         ),
                     ),

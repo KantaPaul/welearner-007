@@ -7,13 +7,14 @@
 if (!defined('ABSPATH')) {
 	die('Direct access forbidden.');
 }
-?>
 
-<?php get_template_part( 'template-parts/components/component', 'topic' ); ?>
-<?php get_template_part( 'template-parts/components/component-tranding', 'course' ); ?>
-<?php get_template_part( 'template-parts/components/component-toprated', 'course' ); ?>
-<?php get_template_part( 'template-parts/components/component', 'counter' ); ?>
-<?php get_template_part( 'template-parts/components/component', 'testimonial' ); ?>
-<?php get_template_part( 'template-parts/components/component', 'creator' ); ?>
-<?php get_template_part( 'template-parts/components/component', 'blog' ); ?>
-<?php get_template_part( 'template-parts/components/component', 'call-to-action' ); ?>
+get_template_part( 'template-parts/components/component', 'topic' );
+get_template_part( 'template-parts/components/component-tranding', 'course' );
+get_template_part( 'template-parts/components/component-toprated', 'course' );
+get_template_part( 'template-parts/components/component', 'counter' );
+get_template_part( 'template-parts/components/component', 'testimonial' );
+get_template_part( 'template-parts/components/component', 'creator' );
+get_template_part( 'template-parts/components/component', 'blog' );
+get_template_part( 'template-parts/components/component', 'call-to-action' );
+
+?>

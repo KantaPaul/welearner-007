@@ -1,14 +1,10 @@
-<?php 
+<?php
 /**
- * Dispaly course serch result 
- * 
+ * Dispaly course serch result
+ *
  */
-if (!defined('ABSPATH')) {
-   die('Direct access forbidden.');
-}
 ?>
-<div class="container mb-5 mt-5">
-   <?php get_template_part('template-parts/sections/content', 'course-loop'); ?> 
-</div>
-<?php 
+    <?php get_template_part('template-parts/components/loop/component', 'course-loop'); ?>
+</main>
+<?php
 get_footer();

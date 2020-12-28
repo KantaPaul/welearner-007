@@ -10,7 +10,7 @@ if (!function_exists('welearner_header_options_setting')) {
     function welearner_header_options_setting() {
 
         // header
-        register_setting( 'welearner-header-settings-group', 'header_button_two_title', );
+        register_setting( 'welearner-header-settings-group', 'header_button_two_title' );
         register_setting( 'welearner-header-settings-group', 'header_button_two_url' );
         register_setting( 'welearner-header-settings-group', 'header_button_two_show' );
     }

@@ -4,22 +4,22 @@
  * Register a custom post type for courses .
  *
  */
-if (!function_exists('wpdocs_codex_course_init')) {
-    function wpdocs_codex_course_init() {
+if (!function_exists('welearner_codex_course_init')) {
+    function welearner_codex_course_init() {
         $labels = array(
-            'name'                  => _x( 'Courses', 'Post type general name', 'welearner-features ' ),
-            'singular_name'         => _x( 'Course', 'Post type singular name', 'welearner-features ' ),
-            'menu_name'             => _x( 'Courses', 'Admin Menu text', 'welearner-features ' ),
-            'name_admin_bar'        => _x( 'Course', 'Add New on Toolbar', 'welearner-features ' ),
-            'add_new_item'          => __( 'Add New Course', 'welearner-features ' ),
-            'new_item'              => __( 'New Course', 'welearner-features ' ),
-            'edit_item'             => __( 'Edit Course', 'welearner-features ' ),
-            'view_item'             => __( 'View Course', 'welearner-features ' ),
-            'all_items'             => __( 'All Courses', 'welearner-features ' ),
-            'search_items'          => __( 'Search Courses', 'welearner-features ' ),
-            'parent_item_colon'     => __( 'Parent Courses:', 'welearner-features ' ),
-            'not_found'             => __( 'No Courses found.', 'welearner-features ' ),
-            'not_found_in_trash'    => __( 'No Courses found in Trash.', 'welearner-features ' ),
+            'name'                  => esc_html_x( 'Courses', 'Post type general name', 'welearner-features ' ),
+            'singular_name'         => esc_html_x( 'Course', 'Post type singular name', 'welearner-features ' ),
+            'menu_name'             => esc_html_x( 'Courses', 'Admin Menu text', 'welearner-features ' ),
+            'name_admin_bar'        => esc_html_x( 'Course', 'Add New on Toolbar', 'welearner-features ' ),
+            'add_new_item'          => esc_html__( 'Add New Course', 'welearner-features ' ),
+            'new_item'              => esc_html__( 'New Course', 'welearner-features ' ),
+            'edit_item'             => esc_html__( 'Edit Course', 'welearner-features ' ),
+            'view_item'             => esc_html__( 'View Course', 'welearner-features ' ),
+            'all_items'             => esc_html__( 'All Courses', 'welearner-features ' ),
+            'search_items'          => esc_html__( 'Search Courses', 'welearner-features ' ),
+            'parent_item_colon'     => esc_html__( 'Parent Courses:', 'welearner-features ' ),
+            'not_found'             => esc_html__( 'No Courses found.', 'welearner-features ' ),
+            'not_found_in_trash'    => esc_html__( 'No Courses found in Trash.', 'welearner-features ' ),
         );
 
         $args = array(
@@ -44,12 +44,12 @@ if (!function_exists('wpdocs_codex_course_init')) {
         unset( $labels );
         // register custom postype for testimonials
         $labels = array(
-            'name'                  => _x( 'Testimonials', 'Post type general name', 'welearner-features ' ),
-            'singular_name'         => _x( 'Testimonial', 'Post type singular name', 'welearner-features ' ),
-            'menu_name'             => _x( 'Testimonials', 'Admin Menu text', 'welearner-features ' ),
-            'name_admin_bar'        => _x( 'Testimonial', 'Add New on Toolbar', 'welearner-features ' ),
-            'view_item'             => __( 'View Testimonial', 'welearner-features ' ),
-            'all_items'             => __( 'All Testimonial', 'welearner-features ' ),
+            'name'                  => esc_html_x( 'Testimonials', 'Post type general name', 'welearner-features ' ),
+            'singular_name'         => esc_html_x( 'Testimonial', 'Post type singular name', 'welearner-features ' ),
+            'menu_name'             => esc_html_x( 'Testimonials', 'Admin Menu text', 'welearner-features ' ),
+            'name_admin_bar'        => esc_html_x( 'Testimonial', 'Add New on Toolbar', 'welearner-features ' ),
+            'view_item'             => esc_html__( 'View Testimonial', 'welearner-features ' ),
+            'all_items'             => esc_html__( 'All Testimonial', 'welearner-features ' ),
         );
 
         $args = array(
@@ -72,19 +72,19 @@ if (!function_exists('wpdocs_codex_course_init')) {
         unset( $args );
         unset( $labels );
         $labels = array(
-            'name'                  => _x( 'Creators', 'Post type general name', 'welearner-features ' ),
-            'singular_name'         => _x( 'Creator', 'Post type singular name', 'welearner-features ' ),
-            'menu_name'             => _x( 'Creators', 'Admin Menu text', 'welearner-features ' ),
-            'name_admin_bar'        => _x( 'Creator', 'Add New on Toolbar', 'welearner-features ' ),
-            'add_new_item'          => __( 'Add New Creator', 'welearner-features ' ),
-            'new_item'              => __( 'New Creator', 'welearner-features ' ),
-            'edit_item'             => __( 'Edit Creator', 'welearner-features ' ),
-            'view_item'             => __( 'View Creator', 'welearner-features ' ),
-            'all_items'             => __( 'All Creators', 'welearner-features ' ),
-            'search_items'          => __( 'Search Creators', 'welearner-features ' ),
-            'parent_item_colon'     => __( 'Parent Creator:', 'welearner-features ' ),
-            'not_found'             => __( 'No Creatorss found.', 'welearner-features ' ),
-            'not_found_in_trash'    => __( 'No Creator found in Trash.', 'welearner-features ' ),
+            'name'                  => esc_html_x( 'Creators', 'Post type general name', 'welearner-features ' ),
+            'singular_name'         => esc_html_x( 'Creator', 'Post type singular name', 'welearner-features ' ),
+            'menu_name'             => esc_html_x( 'Creators', 'Admin Menu text', 'welearner-features ' ),
+            'name_admin_bar'        => esc_html_x( 'Creator', 'Add New on Toolbar', 'welearner-features ' ),
+            'add_new_item'          => esc_html__( 'Add New Creator', 'welearner-features ' ),
+            'new_item'              => esc_html__( 'New Creator', 'welearner-features ' ),
+            'edit_item'             => esc_html__( 'Edit Creator', 'welearner-features ' ),
+            'view_item'             => esc_html__( 'View Creator', 'welearner-features ' ),
+            'all_items'             => esc_html__( 'All Creators', 'welearner-features ' ),
+            'search_items'          => esc_html__( 'Search Creators', 'welearner-features ' ),
+            'parent_item_colon'     => esc_html__( 'Parent Creator:', 'welearner-features ' ),
+            'not_found'             => esc_html__( 'No Creatorss found.', 'welearner-features ' ),
+            'not_found_in_trash'    => esc_html__( 'No Creator found in Trash.', 'welearner-features ' ),
         );
 
         $args = array(
@@ -107,7 +107,7 @@ if (!function_exists('wpdocs_codex_course_init')) {
 
     }
 
-    add_action( 'init', 'wpdocs_codex_course_init' );
+    add_action( 'init', 'welearner_codex_course_init' );
 }
 
 //  register taxonomy for course
@@ -118,17 +118,17 @@ if (!function_exists('wpdocs_codex_course_init')) {
 if (!function_exists('welearner_create_topic_taxonomies')) {
     function welearner_create_topic_taxonomies() {
         $labels = array(
-            'name'              => _x( 'Course Topics', 'taxonomy general name', 'welearner-features ' ),
-            'singular_name'     => _x( 'Course Topic', 'taxonomy singular name', 'welearner-features ' ),
-            'search_items'      => __( 'Search Topics', 'welearner-features ' ),
-            'all_items'         => __( 'All Topics', 'welearner-features ' ),
-            'parent_item'       => __( 'Parent Topic', 'welearner-features ' ),
-            'parent_item_colon' => __( 'Parent Topic:', 'welearner-features ' ),
-            'edit_item'         => __( 'Edit Topic', 'welearner-features ' ),
-            'update_item'       => __( 'Update Topic', 'welearner-features ' ),
-            'add_new_item'      => __( 'Add New Topic', 'welearner-features ' ),
-            'new_item_name'     => __( 'New Topic Name', 'welearner-features ' ),
-            'menu_name'         => __( 'Course Topic', 'welearner-features ' ),
+            'name'              => esc_html_x( 'Course Topics', 'taxonomy general name', 'welearner-features ' ),
+            'singular_name'     => esc_html_x( 'Course Topic', 'taxonomy singular name', 'welearner-features ' ),
+            'search_items'      => esc_html__( 'Search Topics', 'welearner-features ' ),
+            'all_items'         => esc_html__( 'All Topics', 'welearner-features ' ),
+            'parent_item'       => esc_html__( 'Parent Topic', 'welearner-features ' ),
+            'parent_item_colon' => esc_html__( 'Parent Topic:', 'welearner-features ' ),
+            'edit_item'         => esc_html__( 'Edit Topic', 'welearner-features ' ),
+            'update_item'       => esc_html__( 'Update Topic', 'welearner-features ' ),
+            'add_new_item'      => esc_html__( 'Add New Topic', 'welearner-features ' ),
+            'new_item_name'     => esc_html__( 'New Topic Name', 'welearner-features ' ),
+            'menu_name'         => esc_html__( 'Course Topic', 'welearner-features ' ),
         );
 
         $args = array(
