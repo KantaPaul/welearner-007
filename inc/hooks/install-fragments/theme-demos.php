@@ -7,6 +7,7 @@ if (!function_exists('_filter_welearner_fw_ext_backups_demos')) {
         $demos_array			 = array(
             'default'			 => array(
                 'title'			 => esc_html__( 'Default', 'welearner' ),
+                'preview_link'	 => esc_url( 'http://pobon.advancingchilds.com/' ),
                 'screenshot'	 => $demo_content_installer . '/default/screenshot.png',
             ),
         );
@@ -18,6 +19,7 @@ if (!function_exists('_filter_welearner_fw_ext_backups_demos')) {
             ) );
             $demo->set_title( $data[ 'title' ] );
             $demo->set_screenshot( $data[ 'screenshot' ] );
+            $demo->set_preview_link( $data[ 'preview_link' ] );
             $demos[ $demo->get_id() ]	 = $demo;
             unset( $demo );
         }
