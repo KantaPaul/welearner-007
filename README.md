@@ -1,37 +1,59 @@
 # Welearner Theme Documentation
 
-Git link  https://github.com/nayeem07007/welearner
-Demo link  http://welearner.mtthighlights.com/
+Git link  https://github.com/KantaPaul/welearner-007
 
-## Requirement 
-PHP - 7.4
-WordPress - 5.6 
-MySQL version 5.6 or greater OR MariaDB version 10.1 or greater.
+## Requirement
+`PHP - 7.4`
+`WordPress - 5.6`
+`MySQL version 5.6 or greater OR MariaDB version 10.1 or greater.`
 
-## Required plugin 
+## Required plugin
 
-welearner assistance, 
-unyson, 
-safe svg, 
+Welearner Features,
+unyson
+##### For demo content please download and active (Backup & Demo Content)
+`Tools > Demo Content Install`
 
-## Cutomize Header 
+## Cutomize Header
 
-Customizer option -> Welearner options 
+`Welearner Options -> Header Settings`
 
-## Customize Footer  
+## Cutomize Banner
 
-wp admin -> We learner  opton page 
+`Customize option -> Welernar Options -> Banner Options`
 
-## Section dispaly 
+## Cutomize Topic
 
-Section dispaly from template-parts/sections 
+`Welearner Options -> Topic Setting`
 
-## page tempalte location 
+## Cutomize Tranding
 
-  template folder 
+`Welearner Options -> Tranding Setting`
 
-## assistance plugin location 
+## Cutomize Toprated
 
-theme folder --> welerner -> plugin
+`Welearner Options -> Toprated Setting`
 
-Thanks for revew my work 
+## Cutomize Testimonial
+
+`Welearner Options -> Testimonial Setting`
+
+## Cutomize Creator
+
+`Welearner Options -> Creator Setting`
+
+## Cutomize Blog
+
+`Welearner Options -> Blog Setting`
+
+## Page Tempalte Location
+
+`template folder`
+
+## Features plugin location
+
+`Theme folder -> welearner -> plugin`
+
+## Demo Content
+
+`Theme folder -> welearner -> demo-content -> default -> f.zip`

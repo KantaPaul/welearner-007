@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 if (!function_exists('welearner_options_panel')) {
     function welearner_options_panel(){
         // add menu page
-        add_menu_page('Welearner', 'Theme Options', 'manage_options', 'welearner-theme-options');
+        add_menu_page('Welearner', 'Welearner Options', 'manage_options', 'welearner-theme-options');
 
         // add submenu page (Header Settings)
         add_submenu_page( 'welearner-theme-options', 'Heaader Options', 'Header Settings', 'manage_options', 'welearner-theme-options', 'welearner_header_func_settings');
