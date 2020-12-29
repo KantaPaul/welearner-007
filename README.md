@@ -35,9 +35,17 @@ unyson
 
 `Welearner Options -> Toprated Setting`
 
+## Cutomize Counter
+
+`Customize option -> Welernar Options -> CounterUP`
+
 ## Cutomize Testimonial
 
 `Welearner Options -> Testimonial Setting`
+
+## Cutomize Client
+
+`Customize option -> Welernar Options -> Client Logo`
 
 ## Cutomize Creator
 
@@ -46,6 +54,10 @@ unyson
 ## Cutomize Blog
 
 `Welearner Options -> Blog Setting`
+
+## Cutomize Footer
+
+`Customize option -> Welernar Options -> Footer`
 
 ## Page Tempalte Location
 
