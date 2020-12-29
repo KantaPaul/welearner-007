@@ -53,7 +53,7 @@ if (!empty($header_button_two_show)) {
 						</a>
 						<!-- // logout button -->
 						<?php } else { ?>
-						<a href="<?php echo esc_url( wp_login_url( get_permalink() ) ); ?>" title="<?php esc_attr_e( 'Login', 'welearner' ); ?>" class="btn btn-link">
+						<a href="<?php echo esc_url( wp_login_url( get_permalink() ) ); ?>" title="<?php esc_attr_e( 'Login', 'welearner' ); ?>" class="btn-login">
 							<?php echo esc_html__( 'Login', 'welearner' ); ?>
 						</a>
 						<!-- // login button -->
